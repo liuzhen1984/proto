@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>需求上传</title>
+    <title>Demand List</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
@@ -15,7 +15,7 @@ a:link, a:visited {
  background-color: #fff;
 }
 a:hover{
-color:#f00; //红色
+color:#f00; //Red
 }
 </style>
  <script type="text/javascript">
@@ -47,7 +47,7 @@ color:#f00; //红色
         parent.document.getElementById("sourceUrl").contentWindow.location.href=url2;
      }
      function del(value){
-         if(confirm("是否继续")){
+         if(confirm("DELETE?")){
             var url="./delete.php?value="+$("#pwd").val()+"/"+value;
             window.open(url);
           }

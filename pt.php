@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>效果图查看</title>
+    <title>Effect view</title>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -12,7 +12,7 @@
         window.open(url);
      }
      function del(value){
-         if(confirm("是否继续")){
+         if(confirm("DELETE?")){
             var url="./delete.php?value="+$("#pwd").val()+"/"+value;
             window.open(url);
           }

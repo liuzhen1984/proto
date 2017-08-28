@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <title>需求上传</title>
+    <title>Proto upload</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
@@ -17,7 +17,7 @@
         if(url&& url.indexOf("about:")==-1){
             window.open(url);
         }else{
-            alert("没有源文件下载");
+            alert("No original files");
         }
      }
      function jumpUrl(){
@@ -29,7 +29,7 @@
         if(url&& url.indexOf("about:")==-1){
             window.open(url);
         }else{
-            alert("没有图片链接");
+            alert("No image files");
         }
      }
      function jumpAdmin(){
@@ -44,13 +44,13 @@
 
 //整个页面的提交 
 function formSubmit(oForm) { 
-  $("#displayphoto").html("上传成功后,请关闭该页面刷新查看");
+  $("#displayphoto").html("After uploading successfully, please close the page to refresh view");
 } 
     </script>
 </head>
 <body>
 <div align="center" style="font-size:28px">
-    需求原型管理
+    Demand prototype management
 </div>
 <p/>
 
@@ -74,16 +74,16 @@ function formSubmit(oForm) {
              </div>
            </td>
         <td align='right'>
-<a href="#upload_proto" class="remodal-confirm">上传原型</a>
+<a href="#upload_proto" class="remodal-confirm">Upload Prototype</a>
 
 <div class="remodal" data-remodal-id="upload_proto">
   <button data-remodal-action="close" class="remodal-close"></button>
           <form action="upload_file.php" method="post" enctype="multipart/form-data" target="_blank">
 
-<div align="center">需求上传</div>
+<div align="center">File upload</div>
 <br/>
 
-&nbsp;&nbsp;&nbsp;&nbsp;         上传类型:
+&nbsp;&nbsp;&nbsp;&nbsp;         file type:
 <select name="type">
  <?php
    foreach ($outType as $type){
@@ -92,11 +92,11 @@ function formSubmit(oForm) {
    }
 ?>
 </select>
-         <label for="file" style="color:red">&nbsp;&nbsp;原型:</label>
+         <label for="file" style="color:red">&nbsp;&nbsp;Prototype:</label>
           <input type="file" name="file" id="file" accept=".zip"/>
 <br/>
 <br/>
-          <input class="remodal-confirm" type="submit" name="submit" value="提交" onclick="formSubmit()"/>
+          <input class="remodal-confirm" type="submit" name="submit" value="Submit" onclick="formSubmit()"/>
          </form>
   <div id="displayphoto"></div> 
 </div>
@@ -107,10 +107,10 @@ function formSubmit(oForm) {
     <br/> 
     <br/> 
     <br/> 
-<input type="button" value="原始链接" onclick="jumpUrl()" />
-<input type="button" value="图片原始链接" onclick="jumpImgUrl()" />
-<input id="bt_download" disabled="disabled" type="button" value="下载源文件" onclick="downloadSource()" />
-<input type="button" value="管理" onclick="jumpAdmin()" />
+<input type="button" value="Url" onclick="jumpUrl()" />
+<input type="button" value="Image Url" onclick="jumpImgUrl()" />
+<input id="bt_download" disabled="disabled" type="button" value="Download sources" onclick="downloadSource()" />
+<input type="button" value="Admin" onclick="jumpAdmin()" />
 <input type="hidden" id="downloadUrl" value="" />
 </div>
 <hr/>

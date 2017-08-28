@@ -9,9 +9,9 @@
 if(isset($_GET["value"])){
    $value=$_GET['value'];
    system("rm -rf ".$value);
-   echo "删除成功!".$value;
+   echo "Sucessful!".$value;
 }else{
-   echo "参数错误";
+   echo "Params error";
 }
 ?>
 </div>

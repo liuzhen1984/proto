@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>上传中...</title>
+<title>Uploading...</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 </head>
@@ -29,13 +29,13 @@ if($_FILES["file"]["type"]=="application/zip"|| $_FILES["file"]["type"]=="applic
       system("mkdir -p ".$path);
       move_uploaded_file($_FILES["file"]["tmp_name"], $fullname);
       system("python unzip.py ".$fullname." ".$path);
-      system("cp  ".$fullname." /letv/proto/".$filename."-".time());
+      system("cp  ".$fullname." ./bak/".$filename."-".time());
       system("mv  ".$fullname." ".$downname);
-      echo "上传成功";
+      echo "Sucessful";
     }
 }else{
   echo "file type=".$_FILES['file']['type']."\n";
-  echo "文件格式错误";
+  echo "Format error";
 }
 ?>
   </div>
